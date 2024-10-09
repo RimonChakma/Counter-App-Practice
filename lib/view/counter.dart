@@ -6,7 +6,39 @@ class CounterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: Text("Counter App",style: TextStyle(
+          fontSize: 30
+        ),),
+      ),
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text("50",style: TextStyle(
+              fontSize: 40,
+              
+            ),),
+          ),
+
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(style: IconButton.styleFrom(
+                backgroundColor: Colors.red
+              ), onPressed: (){}, icon:Icon( Icons.remove,color: Colors.white,)),
+
+              IconButton(style: IconButton.styleFrom(
+                backgroundColor: Colors.red
+              ), onPressed: (){}, icon:Icon( Icons.add,color: Colors.white,))
+            ],
+          ),
+
+          ElevatedButton(onPressed: (){}, child: Text("Click"))
+        ],
+      ),
     );
   }
 }
