@@ -60,6 +60,14 @@ class CounterView extends StatelessWidget {
 
           ElevatedButton(onPressed: (){
             controller.counter.value =0;
+
+            Get.snackbar(
+              "Success", 
+              "you success this proceess and try next",
+              backgroundColor: Colors.blue,
+              colorText: Colors.white,
+              snackPosition: SnackPosition.BOTTOM
+              );
           
           }, child: Text("Click")),
 
