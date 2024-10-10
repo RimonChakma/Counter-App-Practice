@@ -1,4 +1,5 @@
 import 'package:counter_app_practice/controller/counter_controller.dart';
+import 'package:counter_app_practice/controller/counter_result.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -57,7 +58,31 @@ class CounterView extends StatelessWidget {
             ],
           ),
 
-          ElevatedButton(onPressed: (){}, child: Text("Click"))
+          ElevatedButton(onPressed: (){
+            controller.counter.value =0;
+          
+          }, child: Text("Click")),
+
+          SizedBox(
+            height: 10,
+          ),
+
+
+            ElevatedButton(onPressed: (){
+
+
+              Get.to (()=>CounterResult(),
+              arguments: {
+                "name":"Rimon Chakma",
+                "class":"10",
+                "isPassed":false
+              }
+              );
+              
+              
+          
+          
+          }, child: Text("show result"))
         ],
       ),
     );
