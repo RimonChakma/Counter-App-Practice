@@ -61,13 +61,23 @@ class CounterView extends StatelessWidget {
           ElevatedButton(onPressed: (){
             controller.counter.value =0;
 
-            Get.snackbar(
-              "Success", 
-              "you success this proceess and try next",
-              backgroundColor: Colors.blue,
-              colorText: Colors.white,
-              snackPosition: SnackPosition.BOTTOM
-              );
+           // Get.snackbar(
+            //  "Success", 
+             // "you success this proceess and try next",
+             // backgroundColor: Colors.blue,
+            //  colorText: Colors.white,
+            //  snackPosition: SnackPosition.BOTTOM
+           //  );
+
+           Get.defaultDialog(
+            title: "Dailouge",
+            content: Text("This is a teast dailouge"),
+            textCancel: "Cancle",
+            textConfirm: "Confirm",
+            onConfirm: (){
+              Get.back();
+            }
+           );
           
           }, child: Text("Click")),
 

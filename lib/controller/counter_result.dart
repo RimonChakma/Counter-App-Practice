@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -31,7 +32,15 @@ class CounterResult extends StatelessWidget {
           ),)),
           IconButton(style: IconButton.styleFrom(
             backgroundColor: Colors.red
-          ),  onPressed: (){}, icon: Icon(arg["isPassed"]? Icons.check: Icons.back_hand,color:arg["isPassed"]? Colors.white:Colors.blue,))
+          ),  onPressed: (){}, icon: Icon(arg["isPassed"]? Icons.check: Icons.back_hand,color:arg["isPassed"]? Colors.white:Colors.blue,)),
+          
+          SizedBox(
+            height: 10,
+          ),
+           
+          ElevatedButton(onPressed: (){
+            Get.back();
+          }, child: Text("Go to counter"))
         ],
       ),
 
